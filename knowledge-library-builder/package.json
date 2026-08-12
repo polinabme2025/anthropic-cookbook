@@ -1,0 +1,15 @@
+{
+  "name": "knowledge-library-builder",
+  "version": "1.0.0",
+  "description": "אשף 5 שלבים לבניית ספריית ידע: לכידה, תמלול, סינתזה, ארגון ושמירה",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  }
+}
