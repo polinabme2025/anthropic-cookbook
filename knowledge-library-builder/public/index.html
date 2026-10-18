@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>בונה ספריית ידע</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>בונה ספריית ידע</h1>
+    <div class="tweaks">
+      <label>צבע <input type="color" id="accent" value="#6c5ce7"></label>
+      <label>גופן
+        <select id="font">
+          <option value="'Heebo', sans-serif">Heebo</option>
+          <option value="'Rubik', sans-serif">Rubik</option>
+          <option value="'Assistant', sans-serif">Assistant</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <nav id="progress" class="progress" aria-label="שלבי האשף"></nav>
+
+  <main id="wizard" class="wizard"></main>
+
+  <footer class="nav-bar">
+    <button class="btn ghost" id="back">חזרה</button>
+    <span id="status-msg" class="status-msg" role="status" aria-live="polite"></span>
+    <button class="btn primary" id="next">המשך</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
