@@ -23,8 +23,8 @@ Thank you for your interest in contributing to the Claude Cookbooks! This guide 
 
 2. **Clone the repository**:
    ```bash
-   git clone https://github.com/anthropics/anthropic-cookbook.git
-   cd anthropic-cookbook
+   git clone https://github.com/anthropics/claude-cookbooks.git
+   cd claude-cookbooks
    ```
 
 3. **Set up the development environment**:
@@ -132,6 +132,19 @@ If a hook fails, fix the issues and try committing again.
    - Use minimal tokens for example API calls
    - Include error handling
 
+5. **Tag Managed Agents with the cookbook name**:
+   ```python
+   agent = client.beta.agents.create(
+       name="cookbook-data-analyst",
+       metadata={"anthropic_cookbook": "claude-cookbooks/data-analyst-agent"},
+       ...
+   )
+   ```
+   - Pass this on every `agents.create` call so we can see which cookbooks people run
+   - The value is `claude-cookbooks/` plus the notebook filename in kebab-case (`data_analyst_agent.ipynb` becomes `data-analyst-agent`)
+   - Use lowercase letters, digits, and hyphens only. A value in any other shape is ignored for attribution, with no error to warn you
+   - Sessions inherit the tag from their agent, so `sessions.create` needs nothing
+
 ### Git Workflow
 
 1. **Create a feature branch**:
@@ -210,8 +223,7 @@ External contributors will have limited API testing to conserve resources.
 
 ## Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/anthropics/anthropic-cookbook/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/anthropics/anthropic-cookbook/discussions)
+- **Issues**: [GitHub Issues](https://github.com/anthropics/claude-cookbooks/issues)
 - **Discord**: [Anthropic Discord](https://www.anthropic.com/discord)
 
 ## Security
